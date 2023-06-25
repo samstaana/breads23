@@ -11,11 +11,17 @@ const app = express()
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+app.use(express.static('public'))
 // Middleware should be added above your routes.  Here, we are setting up which view engine will be used and requiring JSX so we can utilize it build our views.
 
 // ROUTES
 app.get('/', (req, res) => {
     res.send('Welcome to an Awesome App about Breads!')
+})
+
+// 404 Page
+app.get ('*', (req, res) => {
+    res.send('404')
 })
 
 // Breads
