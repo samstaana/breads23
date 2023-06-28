@@ -5,12 +5,12 @@ function New () {
     return (
         <Default>
             <h2>Add a new bread</h2>
-            <form action='/breads' method='POST'>
+            <form action="/breads" method="POST">
                 <label htmlFor='name'>Name</label>
                 <input
-                    type='text'
-                    name='name'
-                    id='name'
+                    type="text"
+                    name="name"
+                    id="name"
                     required
                 />
                 <label htmlFor="image">Image</label>

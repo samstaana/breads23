@@ -14,7 +14,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
-app.use(methodOverride('method'))
+app.use(methodOverride('_method'))
 // Middleware should be added above your routes.  Here, we are setting up which view engine will be used and requiring JSX so we can utilize it build our views.
 
 // ROUTES
